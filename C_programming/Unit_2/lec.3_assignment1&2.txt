@@ -1,0 +1,163 @@
+###### Lec.3_assignment1&2 ######
+
+
+//////############################# Assignment 1 #############################////////////
+
+##EX:4##
+(Write C Program to Multiply two Floating Point Numbers)
+
+#include <stdio.h>
+
+void main(){
+
+	float a,b,product ;
+	printf("Enter tow numbers: ");
+	fflush(stdin); fflush(stdout);
+	scanf("%f %f",&a,&b);
+	product= a*b ;
+	printf("product= %f",product);
+}
+######################################################################
+
+##EX:5##
+(Write C Program to Find ASCII Value of a Character)
+
+#include <stdio.h>
+
+void main(){
+
+	char a;
+	printf("Enter a caracter: ");
+	fflush(stdin); fflush(stdout);
+	scanf("%c",&a);
+	printf("ASCII value of %c %d",a,a);
+}
+########################################################################
+
+##EX:6##
+(Write Source Code to Swap Two Numbers)
+
+#include <stdio.h>
+int main(){
+      float a,b,c;
+      printf("Enter value of a: ");
+      fflush(stdin); fflush(stdout);
+      scanf("%f",&a);
+      printf("Enter value of b: ");
+      fflush(stdin); fflush(stdout);
+      scanf("%f",&b);
+      c = a;
+      a = b;
+      b = c;
+      printf("After swapping, value of a = %f\n", a);
+      printf("After swapping, value of b = %f", b);
+}
+##########################################################################
+
+##EX:7##
+(Write Source Code to Swap Two Numbers without temp variable)
+
+#include <stdio.h>
+
+void main(){
+	float a,b;
+	      printf("Enter value of a: ");
+	      fflush(stdin); fflush(stdout);
+	      scanf("%f",&a);
+	      printf("Enter value of b: ");
+	      fflush(stdin); fflush(stdout);
+	      scanf("%f",&b);
+	      a = a+b ;
+	      b = a-b ;
+	      a = a-b ;
+	      printf("After swapping, value of a = %.3f\n", a);
+	      printf("After swapping, value of b = %.3f", b);
+	}
+###################################################################################################
+
+//////################################### Assignment 2 #################################///////
+
+##EX:1##
+(Check number is even or odd)
+
+#include <stdio.h>
+
+void main(){
+	int a;
+	printf("Enter the integer you want to check:  ");
+	fflush(stdin); fflush(stdout);
+	scanf("%d",&a);
+	if (a%2==0){ printf("Number is even"); }
+	else { printf("Number is odd"); }
+}
+or >>>>>>>>  (a%2==0) ? printf("Number is even") : printf("Number is odd");
+############################################################################
+
+## EX:5 ##
+(Check the character is vowel or not)
+
+#include <stdio.h>
+
+void main(){
+
+	char a;
+	printf("enter the alphabet: ");
+	fflush(stdin); fflush(stdout);
+	scanf("%c",&a);
+	int b = a;
+	((b >= 65 && b <= 90) || (b >= 97 && b <= 122)) ? printf("alphabet") : printf("not alphabet");
+}
+#############################################################################
+
+## EX:7 ##
+/* (Find factorial of number) */
+
+#include <stdio.h>
+
+void main(){
+
+	int i,num;
+	unsigned int factorial=1;
+	printf("Enter an integer:  ");
+	fflush(stdin); fflush(stdout);
+	scanf("%d",&num);
+	if (num>=0){
+		for( i=1;i<=num;++i){
+			factorial= factorial*i;
+		}
+		printf("Factorial = %d",factorial);
+	}
+	else{ printf("ERORR!!! factorial of negative number does not exist");}
+}
+##############################################################################
+
+## EX:8 ##
+
+/* (Simple calculator ) */
+
+#include <stdio.h>
+
+void main(){
+
+char a;
+float num1,num2;
+printf("Enter the operator(+,-,*,/): ");
+fflush(stdin); fflush(stdout);
+scanf("%c",&a);
+printf("Enter toe operands: ");
+fflush(stdin); fflush(stdout);
+scanf("%f%f",&num1,&num2);
+switch(a){
+case '+': printf("%.3f+%.3f=%.3f",num1,num2,num1+num2);
+break;
+case '-': printf("%.3f-%.3f=%.3f",num1,num2,num1-num2);
+break;
+case '*': printf("%.3f*%.3f=%.3f",num1,num2,num1*num2);
+break;
+case '/': printf("%.3f/%.3f=%.3f",num1,num2,num1/num2);
+break;
+default :printf("Error!!! operator is not correct");
+break;
+}
+}
+###################################################################################################
